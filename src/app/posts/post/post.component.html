@@ -1,0 +1,8 @@
+<p>post works!</p>
+<div *ngIf="isLoading$ | async">Loading...</div>
+
+<div *ngIf="getPost$ | async as posts">
+  <div *ngFor="let post of posts">
+    <p>{{ post.id }} : {{ post.title }}</p>
+  </div>
+</div>
